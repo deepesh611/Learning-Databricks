@@ -230,6 +230,8 @@ So the full workflow is: **Drop a parquet file → pipeline runs → Gold tables
 
 ## 📊 Dashboard (Databricks SQL)
 
+[Click here to open Sample Dashboard >>>](./Deeps%20NYC%20Trip%20Analysis.pdf)
+
 Built in Databricks SQL using the Gold tables. Key widgets:
 
 | Widget | Query |
