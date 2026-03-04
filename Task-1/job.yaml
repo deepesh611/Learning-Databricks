@@ -1,0 +1,32 @@
+resources:
+  jobs:
+    Deeps_NYC_Taxi_Job:
+      name: Deeps NYC Taxi Job
+      email_notifications:
+        on_start:
+          - d30930606@gmail.com
+        on_success:
+          - d30930606@gmail.com
+        on_failure:
+          - d30930606@gmail.com
+      trigger:
+        pause_status: UNPAUSED
+        file_arrival:
+          url: /Volumes/deeps-task/vols/volumes/main/raw/nyc_taxi/
+      tasks:
+        - task_key: Medallion_Architecture
+          pipeline_task:
+            pipeline_id: 39fa9810-c1b1-4b35-8309-20b3c88233cd
+            full_refresh: false
+          max_retries: 1
+          min_retry_interval_millis: 900000
+          email_notifications:
+            on_start:
+              - d30930606@gmail.com
+            on_success:
+              - d30930606@gmail.com
+            on_failure:
+              - d30930606@gmail.com
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
